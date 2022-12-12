@@ -1,0 +1,231 @@
+THE WITCH PROJECT
+
+****
+
+An asyncio-based, powerful and fast SQLi vulnerability checker tool.
+powered by handwritten BlackWidow crawler, it crawls a site and grabs URLs to scan them.
+Comes with multi-page dorking (Google), reverse domain, admin finder and so much more!
+
+****
+
+
+WAS CODING HAPPILY :)
+
+
+D:\AK_FILES\The Witch Project\core>python
+Python 3.8.8 (tags/v3.8.8:024d805, Feb 19 2021, 13:18:16) [MSC v.1928 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from crawler import crawlSite
+>>> crawlSite(['http://www.asfaa.org/members.php?id=1'])
+>>> from crawler import *
+>>> visited
+{'http://www.asfaa.org/members.php?id=1', 'http://www.asfaa.org/'}
+>>> grabbed
+{'http://www.asfaa.org/members.php?id=14', 'http://www.asfaa.org/news.php?id=466', 'http://www.asfaa.org/calendar.php?id=465', 'http://www.asfaa.org/members.php?id=2', 'http://www.asfaa.org/members.php?id=25', 'http://www.asfaa.org/members.php?id=11', 'http://www.asfaa.org/members.php?id=19', 'http://www.asfaa.org/members.php?id=1', 'http://www.asfaa.org/institutional.php?id=0', 'http://www.asfaa.org/news.php?id=449', 'http://www.asfaa.org/publications.php?id=1', 'http://www.asfaa.org/institutional.php?id=2', 'http://www.asfaa.org/members.php?id=13', 'http://www.asfaa.org/members.php?id=8', 'http://www.asfaa.org/members.php?id=12', 'http://www.asfaa.org/institutional.php?id=1', 'http://www.asfaa.org/members.php?id=7', 'http://www.asfaa.org/members.php?id=20', 'http://www.asfaa.org/news.php?id=464', 'http://www.asfaa.org/members.php?id=23', 'http://www.asfaa.org/news.php?id=454', 'http://www.asfaa.org/members.php?id=4', 'http://www.asfaa.org/members.php?id=26', 'http://www.asfaa.org/publications.php?id=2', 'http://www.asfaa.org/news.php?id=452', 'http://www.asfaa.org/members.php?id=6', 'http://www.asfaa.org/members.php?id=9', 'http://www.asfaa.org/members.php?id=27', 'http://www.asfaa.org/members.php?id=3', 'http://www.asfaa.org/members.php?id=15', 'http://www.asfaa.org/members.php?id=10', 'http://www.asfaa.org/members.php?id=21', 'http://www.asfaa.org/institutional.php?id=3', 'http://www.asfaa.org/news.php?id=458', 'http://www.asfaa.org/news.php?id=133'}
+>>> lst = list(grabbed)
+>>> lst
+['http://www.asfaa.org/members.php?id=14', 'http://www.asfaa.org/news.php?id=466', 'http://www.asfaa.org/calendar.php?id=465', 'http://www.asfaa.org/members.php?id=2', 'http://www.asfaa.org/members.php?id=25', 'http://www.asfaa.org/members.php?id=11', 'http://www.asfaa.org/members.php?id=19', 'http://www.asfaa.org/members.php?id=1', 'http://www.asfaa.org/institutional.php?id=0', 'http://www.asfaa.org/news.php?id=449', 'http://www.asfaa.org/publications.php?id=1', 'http://www.asfaa.org/institutional.php?id=2', 'http://www.asfaa.org/members.php?id=13', 'http://www.asfaa.org/members.php?id=8', 'http://www.asfaa.org/members.php?id=12', 'http://www.asfaa.org/institutional.php?id=1', 'http://www.asfaa.org/members.php?id=7', 'http://www.asfaa.org/members.php?id=20', 'http://www.asfaa.org/news.php?id=464', 'http://www.asfaa.org/members.php?id=23', 'http://www.asfaa.org/news.php?id=454', 'http://www.asfaa.org/members.php?id=4', 'http://www.asfaa.org/members.php?id=26', 'http://www.asfaa.org/publications.php?id=2', 'http://www.asfaa.org/news.php?id=452', 'http://www.asfaa.org/members.php?id=6', 'http://www.asfaa.org/members.php?id=9', 'http://www.asfaa.org/members.php?id=27', 'http://www.asfaa.org/members.php?id=3', 'http://www.asfaa.org/members.php?id=15', 'http://www.asfaa.org/members.php?id=10', 'http://www.asfaa.org/members.php?id=21', 'http://www.asfaa.org/institutional.php?id=3', 'http://www.asfaa.org/news.php?id=458', 'http://www.asfaa.org/news.php?id=133']
+>>> crawlSite(lst)
+>>> grabbed
+{'http://www.asfaa.org/members.php?id=14', 'http://www.asfaa.org/news.php?id=466', 'http://www.asfaa.org/calendar.php?id=465', 'http://www.asfaa.org/members.php?id=2', 'http://www.asfaa.org/members.php?id=25', 'http://www.asfaa.org/members.php?id=11', 'http://www.asfaa.org/members.php?id=19', 'http://www.asfaa.org/members.php?id=1', 'http://www.asfaa.org/institutional.php?id=0', 'http://www.asfaa.org/news.php?id=449', 'http://www.asfaa.org/publications.php?id=1', 'http://www.asfaa.org/institutional.php?id=2', 'http://www.asfaa.org/members.php?id=13', 'http://www.asfaa.org/members.php?id=8', 'http://www.asfaa.org/members.php?id=12', 'http://www.asfaa.org/institutional.php?id=1', 'http://www.asfaa.org/members.php?id=7', 'http://www.asfaa.org/members.php?id=20', 'http://www.asfaa.org/news.php?id=464', 'http://www.asfaa.org/members.php?id=23', 'http://www.asfaa.org/news.php?id=454', 'http://www.asfaa.org/members.php?id=4', 'http://www.asfaa.org/members.php?id=26', 'http://www.asfaa.org/publications.php?id=2', 'http://www.asfaa.org/news.php?id=452', 'http://www.asfaa.org/members.php?id=6', 'http://www.asfaa.org/members.php?id=9', 'http://www.asfaa.org/members.php?id=27', 'http://www.asfaa.org/members.php?id=3', 'http://www.asfaa.org/members.php?id=15', 'http://www.asfaa.org/members.php?id=10', 'http://www.asfaa.org/members.php?id=21', 'http://www.asfaa.org/institutional.php?id=3', 'http://www.asfaa.org/news.php?id=458', 'http://www.asfaa.org/news.php?id=133'}
+>>> visited
+{'http://www.asfaa.org/members.php?id=1', 'http://www.asfaa.org/'}
+>>> ^Z
+
+
+D:\AK_FILES\The Witch Project\core>python
+Python 3.8.8 (tags/v3.8.8:024d805, Feb 19 2021, 13:18:16) [MSC v.1928 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from crawler import *
+>>> crawlSite(['http://www.asfaa.org/members.php?id=1'])
+>>> grabbed
+{'http://www.asfaa.org/members.php?id=4', 'http://www.asfaa.org/members.php?id=1', 'http://www.asfaa.org/members.php?id=6', 'http://www.asfaa.org/members.php?id=26', 'http://www.asfaa.org/news.php?id=449', 'http://www.asfaa.org/members.php?id=23', 'http://www.asfaa.org/members.php?id=14', 'http://www.asfaa.org/publications.php?id=1', 'http://www.asfaa.org/members.php?id=9', 'http://www.asfaa.org/members.php?id=8', 'http://www.asfaa.org/calendar.php?id=465', 'http://www.asfaa.org/members.php?id=25', 'http://www.asfaa.org/institutional.php?id=1', 'http://www.asfaa.org/members.php?id=2', 'http://www.asfaa.org/news.php?id=466', 'http://www.asfaa.org/institutional.php?id=0', 'http://www.asfaa.org/news.php?id=133', 'http://www.asfaa.org/news.php?id=454', 'http://www.asfaa.org/members.php?id=10', 'http://www.asfaa.org/members.php?id=20', 'http://www.asfaa.org/members.php?id=21', 'http://www.asfaa.org/news.php?id=452', 'http://www.asfaa.org/members.php?id=7', 'http://www.asfaa.org/publications.php?id=2', 'http://www.asfaa.org/members.php?id=13', 'http://www.asfaa.org/institutional.php?id=3', 'http://www.asfaa.org/members.php?id=19', 'http://www.asfaa.org/members.php?id=15', 'http://www.asfaa.org/members.php?id=11', 'http://www.asfaa.org/institutional.php?id=2', 'http://www.asfaa.org/news.php?id=458', 'http://www.asfaa.org/members.php?id=27', 'http://www.asfaa.org/members.php?id=12', 'http://www.asfaa.org/news.php?id=464', 'http://www.asfaa.org/members.php?id=3'}
+>>> visited
+{'http://www.asfaa.org/members.php?id=1', 'http://www.asfaa.org/'}
+>>> lst = list(grabbed)
+>>> crawlSite(lst)
+>>> grabbed
+{'http://www.asfaa.org/months.php?mid=102011', 'http://www.asfaa.org/months.php?mid=122012', 'http://www.asfaa.org/members.php?id=6', 'http://www.asfaa.org/calendarmonth.php?mid=022014', 'http://www.asfaa.org/members.php?id=9', 'http://www.asfaa.org/calendarmonth.php?mid=102015', 'http://www.asfaa.org/members.php?id=8', 'http://www.asfaa.org/months.php?mid=102019', 'http://www.asfaa.org/months.php?mid=012014', 'http://www.asfaa.org/months.php?mid=112010', 'http://www.asfaa.org/months.php?mid=102010', 'http://www.asfaa.org/institutional.php?id=1', 'http://www.asfaa.org/calendarmonth.php?mid=102013', 'http://www.asfaa.org/months.php?mid=062010', 'http://www.asfaa.org/months.php?mid=022011', 'http://asfaa.org/news.php?id=452', 'http://www.asfaa.org/members.php?id=20', 'http://www.asfaa.org/institutional.php?id=0', 'http://www.asfaa.org/news.php?id=452', 'http://www.asfaa.org/members.php?id=7', 'http://www.asfaa.org/months.php?mid=082010', 'http://www.asfaa.org/months.php?mid=102008', 'http://www.asfaa.org/calendarmonth.php?mid=042014', 'http://www.asfaa.org/members.php?id=13', 'http://www.asfaa.org/months.php?mid=012010', 'http://www.asfaa.org/institutional.php?id=3', 'http://www.asfaa.org/months.php?mid=092008', 'http://www.asfaa.org/members.php?id=19', 'http://www.asfaa.org/months.php?mid=112012', 'http://www.asfaa.org/members.php?id=15', 'http://www.asfaa.org/calendarmonth.php?mid=032013', 'http://www.asfaa.org/months.php?mid=062006', 'http://www.asfaa.org/months.php?mid=102015', 'http://www.asfaa.org/months.php?mid=032010', 'http://www.asfaa.org/news.php?id=464', 'http://www.asfaa.org/members.php?id=3', 'http://www.asfaa.org/months.php?mid=042010', 'http://www.asfaa.org/months.php?mid=052012', 'http://www.asfaa.org/months.php?mid=032013', 'http://www.asfaa.org/calendarmonth.php?mid=032020', 'http://www.asfaa.org/calendarmonth.php?mid=052014', 'http://www.asfaa.org/news.php?id=449', 'http://www.asfaa.org/members.php?id=23', 'http://www.asfaa.org/months.php?mid=082016', 'http://www.asfaa.org/months.php?mid=022018', 'http://www.asfaa.org/calendarmonth.php?mid=022018', 'http://www.asfaa.org/months.php?mid=092010', 'http://www.asfaa.org/months.php?mid=102012', 'http://www.asfaa.org/months.php?mid=112009', 'http://www.asfaa.org/months.php?mid=052016', 'http://www.asfaa.org/months.php?mid=022010', 'http://asfaa.org/news.php?id=449', 'http://www.asfaa.org/calendarmonth.php?mid=052013', 'http://www.asfaa.org/months.php?mid=032014', 'http://www.asfaa.org/months.php?mid=052007', 'http://www.asfaa.org/months.php?mid=102013', 'http://www.asfaa.org/members.php?id=10', 'http://www.asfaa.org/months.php?mid=062018', 'http://www.asfaa.org/months.php?mid=032008', 'http://www.asfaa.org/members.php?id=21', 'http://www.asfaa.org/months.php?mid=022012', 'http://www.asfaa.org/months.php?mid=062012', 'http://www.asfaa.org/months.php?mid=112015', 'http://www.asfaa.org/months.php?mid=102009', 'http://www.asfaa.org/months.php?mid=032009', 'http://www.asfaa.org/months.php?mid=072007', 'http://www.asfaa.org/calendarmonth.php?mid=042015', 'http://www.asfaa.org/calendarmonth.php?mid=112014', 'http://www.asfaa.org/months.php?mid=092011', 'http://www.asfaa.org/months.php?mid=082011', 'http://www.asfaa.org/months.php?mid=042011', 'http://www.asfaa.org/members.php?id=11', 'http://www.asfaa.org/institutional.php?id=2', 'http://asfaa.org/news.php?id=454', 'http://asfaa.org/news.php?id=458', 'http://www.asfaa.org/news.php?id=455', 'http://www.asfaa.org/months.php?mid=112008', 'http://www.asfaa.org/calendarmonth.php?mid=092013', 'http://www.asfaa.org/months.php?mid=042013', 'http://www.asfaa.org/months.php?mid=022013', 'http://www.asfaa.org/months.php?mid=072014', 'http://www.asfaa.org/months.php?mid=042009', 'http://www.asfaa.org/months.php?mid=122009', 'http://www.asfaa.org/months.php?mid=022009', 'http://www.asfaa.org/members.php?id=14', 'http://www.asfaa.org/publications.php?id=1', 'http://www.asfaa.org/months.php?mid=112013', 'http://www.asfaa.org/months.php?mid=092018', 'http://www.asfaa.org/months.php?mid=032011', 'http://www.asfaa.org/months.php?mid=092013', 'http://www.asfaa.org/months.php?mid=012013', 'http://www.asfaa.org/months.php?mid=112011', 'http://www.asfaa.org/months.php?mid=062011', 'http://www.asfaa.org/members.php?id=2', 'http://www.asfaa.org/months.php?mid=032012', 'http://www.asfaa.org/months.php?mid=102017', 'http://www.asfaa.org/months.php?mid=032015', 'http://www.asfaa.org/months.php?mid=072010', 'http://www.asfaa.org/months.php?mid=052009', 'http://www.asfaa.org/months.php?mid=072011', 'http://www.asfaa.org/news.php?id=454', 'http://www.asfaa.org/months.php?mid=082003', 'http://www.asfaa.org/calendarmonth.php?mid=092018', 'http://www.asfaa.org/months.php?mid=072012', 'http://www.asfaa.org/months.php?mid=092009', 'http://www.asfaa.org/months.php?mid=012003', 'http://www.asfaa.org/calendarmonth.php?mid=052015', 'http://www.asfaa.org/months.php?mid=042003', 'http://www.asfaa.org/months.php?mid=102014', 'http://www.asfaa.org/calendarmonth.php?mid=112018', 'http://www.asfaa.org/months.php?mid=052010', 'http://www.asfaa.org/months.php?mid=022015', 'http://www.asfaa.org/calendarmonth.php?mid=062014', 'http://www.asfaa.org/months.php?mid=012017', 'http://www.asfaa.org/months.php?mid=042012', 'http://www.asfaa.org/months.php?mid=012009', 'http://www.asfaa.org/months.php?mid=072009', 'http://www.asfaa.org/calendarmonth.php?mid=062018', 'http://www.asfaa.org/calendarmonth.php?mid=062021', 'http://www.asfaa.org/months.php?mid=062008', 'http://www.asfaa.org/members.php?id=4', 'http://www.asfaa.org/calendarmonth.php?mid=092014', 'http://asfaa.org/news.php?id=466', 'http://www.asfaa.org/members.php?id=1', 'http://www.asfaa.org/members.php?id=26', 'http://www.asfaa.org/months.php?mid=042014', 'http://asfaa.org/news.php?id=133', 'http://www.asfaa.org/calendar.php?id=465', 'http://www.asfaa.org/members.php?id=25', 'http://www.asfaa.org/months.php?mid=012011', 'http://www.asfaa.org/months.php?mid=062009', 'http://www.asfaa.org/months.php?mid=092007', 'http://asfaa.org/news.php?id=464', 'http://www.asfaa.org/months.php?mid=082009', 'http://www.asfaa.org/months.php?mid=062013', 'http://www.asfaa.org/months.php?mid=082012', 'http://www.asfaa.org/calendarmonth.php?mid=102017', 'http://www.asfaa.org/news.php?id=457', 'http://www.asfaa.org/calendarmonth.php?mid=042013', 'http://www.asfaa.org/months.php?mid=052015', 'http://www.asfaa.org/news.php?id=466', 'http://www.asfaa.org/news.php?id=133', 'http://www.asfaa.org/calendarmonth.php?mid=032014', 'http://www.asfaa.org/calendarmonth.php?mid=102014', 'http://www.asfaa.org/publications.php?id=2', 'http://www.asfaa.org/months.php?mid=032019', 'http://www.asfaa.org/months.php?mid=082013', 'http://www.asfaa.org/months.php?mid=122008', 'http://www.asfaa.org/months.php?mid=122011', 'http://www.asfaa.org/months.php?mid=022014', 'http://www.asfaa.org/months.php?mid=122010', 'http://www.asfaa.org/months.php?mid=072017', 'http://www.asfaa.org/months.php?mid=092014', 'http://www.asfaa.org/months.php?mid=052013', 'http://www.asfaa.org/news.php?id=458', 'http://www.asfaa.org/months.php?mid=052011', 'http://www.asfaa.org/members.php?id=27', 'http://www.asfaa.org/months.php?mid=022020', 'http://www.asfaa.org/members.php?id=12', 'http://www.asfaa.org/months.php?mid=112018', 'http://www.asfaa.org/calendarmonth.php?mid=052016', 'http://www.asfaa.org/months.php?mid=062014'}
+>>> len(grabbed)
+162
+>>> for x in grabbed:print(x)
+...
+http://www.asfaa.org/months.php?mid=102011
+http://www.asfaa.org/months.php?mid=122012
+http://www.asfaa.org/members.php?id=6
+http://www.asfaa.org/calendarmonth.php?mid=022014
+http://www.asfaa.org/members.php?id=9
+http://www.asfaa.org/calendarmonth.php?mid=102015
+http://www.asfaa.org/members.php?id=8
+http://www.asfaa.org/months.php?mid=102019
+http://www.asfaa.org/months.php?mid=012014
+http://www.asfaa.org/months.php?mid=112010
+http://www.asfaa.org/months.php?mid=102010
+http://www.asfaa.org/institutional.php?id=1
+http://www.asfaa.org/calendarmonth.php?mid=102013
+http://www.asfaa.org/months.php?mid=062010
+http://www.asfaa.org/months.php?mid=022011
+http://asfaa.org/news.php?id=452
+http://www.asfaa.org/members.php?id=20
+http://www.asfaa.org/institutional.php?id=0
+http://www.asfaa.org/news.php?id=452
+http://www.asfaa.org/members.php?id=7
+http://www.asfaa.org/months.php?mid=082010
+http://www.asfaa.org/months.php?mid=102008
+http://www.asfaa.org/calendarmonth.php?mid=042014
+http://www.asfaa.org/members.php?id=13
+http://www.asfaa.org/months.php?mid=012010
+http://www.asfaa.org/institutional.php?id=3
+http://www.asfaa.org/months.php?mid=092008
+http://www.asfaa.org/members.php?id=19
+http://www.asfaa.org/months.php?mid=112012
+http://www.asfaa.org/members.php?id=15
+http://www.asfaa.org/calendarmonth.php?mid=032013
+http://www.asfaa.org/months.php?mid=062006
+http://www.asfaa.org/months.php?mid=102015
+http://www.asfaa.org/months.php?mid=032010
+http://www.asfaa.org/news.php?id=464
+http://www.asfaa.org/members.php?id=3
+http://www.asfaa.org/months.php?mid=042010
+http://www.asfaa.org/months.php?mid=052012
+http://www.asfaa.org/months.php?mid=032013
+http://www.asfaa.org/calendarmonth.php?mid=032020
+http://www.asfaa.org/calendarmonth.php?mid=052014
+http://www.asfaa.org/news.php?id=449
+http://www.asfaa.org/members.php?id=23
+http://www.asfaa.org/months.php?mid=082016
+http://www.asfaa.org/months.php?mid=022018
+http://www.asfaa.org/calendarmonth.php?mid=022018
+http://www.asfaa.org/months.php?mid=092010
+http://www.asfaa.org/months.php?mid=102012
+http://www.asfaa.org/months.php?mid=112009
+http://www.asfaa.org/months.php?mid=052016
+http://www.asfaa.org/months.php?mid=022010
+http://asfaa.org/news.php?id=449
+http://www.asfaa.org/calendarmonth.php?mid=052013
+http://www.asfaa.org/months.php?mid=032014
+http://www.asfaa.org/months.php?mid=052007
+http://www.asfaa.org/months.php?mid=102013
+http://www.asfaa.org/members.php?id=10
+http://www.asfaa.org/months.php?mid=062018
+http://www.asfaa.org/months.php?mid=032008
+http://www.asfaa.org/members.php?id=21
+http://www.asfaa.org/months.php?mid=022012
+http://www.asfaa.org/months.php?mid=062012
+http://www.asfaa.org/months.php?mid=112015
+http://www.asfaa.org/months.php?mid=102009
+http://www.asfaa.org/months.php?mid=032009
+http://www.asfaa.org/months.php?mid=072007
+http://www.asfaa.org/calendarmonth.php?mid=042015
+http://www.asfaa.org/calendarmonth.php?mid=112014
+http://www.asfaa.org/months.php?mid=092011
+http://www.asfaa.org/months.php?mid=082011
+http://www.asfaa.org/months.php?mid=042011
+http://www.asfaa.org/members.php?id=11
+http://www.asfaa.org/institutional.php?id=2
+http://asfaa.org/news.php?id=454
+http://asfaa.org/news.php?id=458
+http://www.asfaa.org/news.php?id=455
+http://www.asfaa.org/months.php?mid=112008
+http://www.asfaa.org/calendarmonth.php?mid=092013
+http://www.asfaa.org/months.php?mid=042013
+http://www.asfaa.org/months.php?mid=022013
+http://www.asfaa.org/months.php?mid=072014
+http://www.asfaa.org/months.php?mid=042009
+http://www.asfaa.org/months.php?mid=122009
+http://www.asfaa.org/months.php?mid=022009
+http://www.asfaa.org/members.php?id=14
+http://www.asfaa.org/publications.php?id=1
+http://www.asfaa.org/months.php?mid=112013
+http://www.asfaa.org/months.php?mid=092018
+http://www.asfaa.org/months.php?mid=032011
+http://www.asfaa.org/months.php?mid=092013
+http://www.asfaa.org/months.php?mid=012013
+http://www.asfaa.org/months.php?mid=112011
+http://www.asfaa.org/months.php?mid=062011
+http://www.asfaa.org/members.php?id=2
+http://www.asfaa.org/months.php?mid=032012
+http://www.asfaa.org/months.php?mid=102017
+http://www.asfaa.org/months.php?mid=032015
+http://www.asfaa.org/months.php?mid=072010
+http://www.asfaa.org/months.php?mid=052009
+http://www.asfaa.org/months.php?mid=072011
+http://www.asfaa.org/news.php?id=454
+http://www.asfaa.org/months.php?mid=082003
+http://www.asfaa.org/calendarmonth.php?mid=092018
+http://www.asfaa.org/months.php?mid=072012
+http://www.asfaa.org/months.php?mid=092009
+http://www.asfaa.org/months.php?mid=012003
+http://www.asfaa.org/calendarmonth.php?mid=052015
+http://www.asfaa.org/months.php?mid=042003
+http://www.asfaa.org/months.php?mid=102014
+http://www.asfaa.org/calendarmonth.php?mid=112018
+http://www.asfaa.org/months.php?mid=052010
+http://www.asfaa.org/months.php?mid=022015
+http://www.asfaa.org/calendarmonth.php?mid=062014
+http://www.asfaa.org/months.php?mid=012017
+http://www.asfaa.org/months.php?mid=042012
+http://www.asfaa.org/months.php?mid=012009
+http://www.asfaa.org/months.php?mid=072009
+http://www.asfaa.org/calendarmonth.php?mid=062018
+http://www.asfaa.org/calendarmonth.php?mid=062021
+http://www.asfaa.org/months.php?mid=062008
+http://www.asfaa.org/members.php?id=4
+http://www.asfaa.org/calendarmonth.php?mid=092014
+http://asfaa.org/news.php?id=466
+http://www.asfaa.org/members.php?id=1
+http://www.asfaa.org/members.php?id=26
+http://www.asfaa.org/months.php?mid=042014
+http://asfaa.org/news.php?id=133
+http://www.asfaa.org/calendar.php?id=465
+http://www.asfaa.org/members.php?id=25
+http://www.asfaa.org/months.php?mid=012011
+http://www.asfaa.org/months.php?mid=062009
+http://www.asfaa.org/months.php?mid=092007
+http://asfaa.org/news.php?id=464
+http://www.asfaa.org/months.php?mid=082009
+http://www.asfaa.org/months.php?mid=062013
+http://www.asfaa.org/months.php?mid=082012
+http://www.asfaa.org/calendarmonth.php?mid=102017
+http://www.asfaa.org/news.php?id=457
+http://www.asfaa.org/calendarmonth.php?mid=042013
+http://www.asfaa.org/months.php?mid=052015
+http://www.asfaa.org/news.php?id=466
+http://www.asfaa.org/news.php?id=133
+http://www.asfaa.org/calendarmonth.php?mid=032014
+http://www.asfaa.org/calendarmonth.php?mid=102014
+http://www.asfaa.org/publications.php?id=2
+http://www.asfaa.org/months.php?mid=032019
+http://www.asfaa.org/months.php?mid=082013
+http://www.asfaa.org/months.php?mid=122008
+http://www.asfaa.org/months.php?mid=122011
+http://www.asfaa.org/months.php?mid=022014
+http://www.asfaa.org/months.php?mid=122010
+http://www.asfaa.org/months.php?mid=072017
+http://www.asfaa.org/months.php?mid=092014
+http://www.asfaa.org/months.php?mid=052013
+http://www.asfaa.org/news.php?id=458
+http://www.asfaa.org/months.php?mid=052011
+http://www.asfaa.org/members.php?id=27
+http://www.asfaa.org/months.php?mid=022020
+http://www.asfaa.org/members.php?id=12
+http://www.asfaa.org/months.php?mid=112018
+http://www.asfaa.org/calendarmonth.php?mid=052016
+http://www.asfaa.org/months.php?mid=062014
+>>> visited
+{'http://www.asfaa.org/members.php?id=4', 'http://www.asfaa.org/members.php?id=1', 'http://www.asfaa.org/members.php?id=6', 'http://www.asfaa.org/members.php?id=26', 'http://www.asfaa.org/members.php?id=23', 'http://www.asfaa.org/news.php?id=449', 'http://www.asfaa.org/members.php?id=14', 'http://www.asfaa.org/publications.php?id=1', 'http://www.asfaa.org/members.php?id=9', 'http://www.asfaa.org/members.php?id=8', 'http://www.asfaa.org/calendar.php?id=465', 'http://www.asfaa.org/institutional.php?id=1', 'http://www.asfaa.org/members.php?id=25', 'http://www.asfaa.org/members.php?id=2', 'http://www.asfaa.org/', 'http://www.asfaa.org/members.php?id=20', 'http://www.asfaa.org/institutional.php?id=0', 'http://www.asfaa.org/news.php?id=466', 'http://www.asfaa.org/members.php?id=10', 'http://www.asfaa.org/news.php?id=454', 'http://www.asfaa.org/news.php?id=133', 'http://www.asfaa.org/members.php?id=21', 'http://www.asfaa.org/news.php?id=452', 'http://www.asfaa.org/members.php?id=7', 'http://www.asfaa.org/publications.php?id=2', 'http://www.asfaa.org/members.php?id=13', 'http://www.asfaa.org/institutional.php?id=3', 'http://www.asfaa.org/members.php?id=19', 'http://www.asfaa.org/members.php?id=15', 'http://www.asfaa.org/members.php?id=11', 'http://www.asfaa.org/institutional.php?id=2', 'http://www.asfaa.org/news.php?id=458', 'http://www.asfaa.org/members.php?id=27', 'http://www.asfaa.org/members.php?id=12', 'http://www.asfaa.org/news.php?id=464', 'http://www.asfaa.org/members.php?id=3'}
+>>> 'http://www.asfaa.org/' in visited
+True
+>>> crawlSite(['http://www.asfaa.org/institutional.php?id=2'])
+>>> import requests
+>>> requests.get('http://www.asfaa.org/institutional.php?id=2').text
+'<!doctype html>\n<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->\n<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->\n<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->\n<!--[if gt IE 8]><!-->\n<html class="">\n<!--<![endif]-->\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>ASFAA Home</title>\n<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>\n<script src="js/respond.min.js"></script>\n<script src="js/jquery.cookie.js"></script>\n<link href="boilerplate.css" rel="stylesheet" type="text/css">\n<link href="common.css" rel="stylesheet" type="text/css">\n<link href="institutionaal.css" rel="stylesheet" type="text/css">\n<style>\n#navaleft li ul {display: none;}\n</style>\n<script>\n$(document).ready(function () {\n  var checkCookie = $.cookie("navleft-item");\n  if (checkCookie != "") {\n\t$(\'#navaleft > li.lival > a:eq(\'+checkCookie+\')\').addClass(\'active\').next().show();\n  }\n  $(\'#navaleft > li.lival > a\').click(function(){\n      var navIndex = $(\'#navaleft > li.lival > a\').index(this);\n\t  $.cookie("navleft-item", navIndex);\n\t  $(\'#navaleft li ul\').slideUp();\n\t   if ($(this).next().is(":visible")){\n\t\t   $(this).next().slideUp();\n\t   } else {\n\t   $(this).next().slideToggle();\n\t   }\n\t   $(\'#navaleft li.lival a\').removeClass(\'active\');\n\t   $(this).addClass(\'active\');\n  });\n});\n</script>\n</head>\n<body>\n<div class="gridContainer clearfix">\n<div id="TopNav">\n<div id="nav_under">\n  <h2><img src="img/logotop.png" width="191" height="186" />&nbsp;&nbsp;&nbsp;<br />\n  </h2>\n</div>\n<a href="https://www.facebook.com/asfaa.org" rel="external"><img src="img/facebook.png" width="50" height="40" alt="Facebook"/></a> &nbsp;<a href="noticias_rss.xml"><img src="img/rss.png" width="50" height="40" alt="RSS"/></a><p>&nbsp;</p>\n</div>\n<div id="LayoutDiv1"></div><div id="leftnav"><ul id=\'navaleft\'>\n<li class=\'lival\'><a href=\'#\'>About ASFAA</a>\n    <ul>\n    <li class=\'naval\'><a href=\'institutional.php?id=0\'>About Us</a></li>\n    <li class=\'naval\'><a href=\'institutional.php?id=1\'>Statutes</a></li>\n    <li class=\'naval\'><a href=\'institutional.php?id=2\'>Presidents</a></li>\n    <li class=\'naval\'><a href=\'institutional.php?id=3\'>Board of Directors</a></li>\n    </ul></li>\n    <li class=\'lival\'><a href=\'members.php\'>Members</a>\n<li class=\'lival\'><a href=\'news.php\'>News</a>\n<li class=\'lival\'><a href=\'calendar.php\'>Events Calendar</a>\n<li class=\'lival\'><a href=\'#\'>Programs</a>\n    <ul>\n    <li class=\'naval\'><a href=\'wwday.php\'>World Walking Day</a></li>\n    <li class=\'naval\'><a href=\'#\'>World Challenge Day</a></li>\n    <li class=\'naval\'><a href=\'#\'>Others</a></li>\n    </ul></li>\n<li class=\'lival\'><a href=\'#\'>Galleries</a>\n<li class=\'lival\'><a href=\'#\'>Publications</a>\n    <ul>\n    <li class=\'naval\'><a href=\'publications.php?id=2\'>The ASFAA Journal</a></li>\n    <li class=\'naval\'><a href=\'publications.php?id=1\'>Newsletter</a></li>\n    </ul></li>\n</ul></div>\n<div id="main">\n      <p>\n        <h1>Presidents</h1>\n<div class="directors">\n  <div class="foto"><img src="img/Pun.jpg" alt="empty" width="96" height="144" /></div>\n  <div class="texto">\n    <h3>Mr. Pun Weng Kun</h3>\n    <p>ASFAA President [Jun 2016 - ]\xa0</p>\n    <div> \n      <p>(info@sport.gov.mo) </p>\n      <p>President of Macao Sports Bureau</p>\n    </div>\n    <p>&nbsp;</p>\n  </div>\n</div>\n<p>&nbsp;</p>\n<div class="directors">\n  <div class="foto"><img src="img/Alex Vong_photo.jpg" alt="empty" width="96" height="144" /></div>\n    <div class="texto">\n      <h3>Mr.Vong Iao Lek </h3>\n      <p>         President of ASFAA since 2013 till Jun 2016\xa0<br />\n      Director-General of Macau Customs.  <br />\n      Former President of the Civic and Municipal Affairs Bureau\'s (IACM)\xa0 <br />\n      Former President of Macao Sports Bureau</p>\n  </div>\n</div>\n<div class="directors">\n\t<div class="foto"><img src="img/fengjz.jpg" alt="empty" width="96" height="144" /></div>\n    <div class="texto">\n      <h3>Mr.\xa0Feng Jianzhong</h3>\n      <p> (asfaa@sport.gov.cn)</p>\n      <p>        Honorary President of ASFAA<br />\n        President of ASFAA from Dec. 2006 to 2012<br />\n        Vice Minister of the General Administration of Sport of China<br />\n        Vice President of Chinese Olympic Committee</p>\n  </div>\n</div>\n<div class="directors">\n\t<div class="foto"><img src="img/president_photo1.jpg" alt="empty" width="96" height="144" /></div>\n    <div class="texto">\n      <h3>Dr.\xa0Shang-Hi RHEE\xa0</h3>\n      <p>(saba_korea@hotmail.com)\xa0<br />\n        <br />\n        ASFAA President from 2000 to Nov. 2006\xa0<br />\n        Member of National Assembly\xa0<br />\n        President, Sport for All Busan Association\xa0<br />\n        Chairman, Korea Invention Promotion Association\xa0<br />\n        President, Young Astronauts Korea\xa0<br />\n        President, Korea Association Of Cyber Education\xa0<br />\n        President, The Korean Society for the Gifted</p>\n  </div>\n</div>\n\n<div class="directors">\n\t<div class="foto"><img src="img/president_photo2.jpg" alt="empty" width="96" height="144" /></div>\n    <div class="texto">\n      <h3>Mr.\xa0Yoshio Tsubouchi<strong>\xa0</strong></h3>\n      <p>(info@ssf.or.jp)\xa0<br />\n        <br />\n        Honorary Member of ASFAA\xa0<br />\n        President of ASFAA from 1992 to 1999<br />\n        Advisor / Former President of Sasakawa Sports Foundation (SSF)</p>\n  </div>\n</div>\n\n<div class="directors">\n\t<div class="foto">\n\t  <h3><img src="img/Chang Ju Ho_photo.jpg" alt="empty" width="96" height="144" /></h3>\n\t</div>\n    <div class="texto">\n      <h3>Dr.<strong>\xa0</strong>Ju-Ho CHANG\xa0</h3>\n      <p>(jhchang@sports.re.kr)\xa0<br />\n        <br />\n        Advisor of ASFAA<br />\n        President of ASFAA from 1991 to 1992<br />\n        President of Korea Sport Science Institute,\xa0<br />\n        Member of the IOC Sport for All Commission</p>\n  </div>\n</div>\n<br />\n\n\n\n  </div>\n\n<div id="third">\n<div class="espa1">\n<h2>INTERNATIONAL BODY</h2>\n<img src="img/tafisa_logo.gif" alt="">\n<h2>REGIONAL TAFISA BODIES</h2>\n<img src="img/fepadet_50px.jpg" alt="fedanet" width="50" height="33">\n<img src="img/logo_50px.jpg" alt="tafisa europe" width="50" height="50">\n<img src="img/logo_tafisaafrica_50px.jpg" alt="tafisa africa" width="50" height="51">\n\n  </div></div>\n  <div id="footer">\n    <h2>ASFAA - ASIANIA SPORT FOR ALL ASSOCIATION</h2>\n<p><strong>SECRETARIAT</strong><br>\nAv. Dr. Rodrigo Rodrigues, No 818, Macau   <br />\n<a href="mailto:secretariat@asfaa.org" target="_blank">secretariat@asfaa.org</a>\xa0<br />\nFax: +853 2834 3708  </p>\n<p>&nbsp;</p>  </div>\n</div>\n</body>\n</html>\n'
+>>> 'http://www.asfaa.org/institutional.php?id=0' in grabbed
+True
+>>>
+
+crawler is done omg
+
+multilevel crawling can be done externally
+
+the core of the crawler is done

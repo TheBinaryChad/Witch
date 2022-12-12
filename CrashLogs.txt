@@ -1,0 +1,12 @@
+[22:03:18] ERROR
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /Cryptonian007/Witch/version.txt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000209EFD46760>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+======
+[18:40:23] ERROR
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /Cryptonian007/Witch/version.txt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000125FBAE77C0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+======
+[20:27:26] ERROR
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /Cryptonian007/Witch/version.txt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001BBBFF7A850>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+======
+[20:52:53] ERROR
+HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Max retries exceeded with url: /Cryptonian007/Witch/version.txt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002948522C880>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+======
